@@ -1,0 +1,834 @@
+<!-- Website by Debashis Barman (http://www.debashisbarman.in) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content=""/>
+<title>Welcome to Official Website of Prajyukttam 2015 | Towards Infinity ...</title>
+<link rel="stylesheet" type="text/css" href="css/kathamo/kathamo.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,500">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Didact+Gothic:400">
+<script type="text/javascript" src="js/jquery1.8.2.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+<style>
+
+body {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 13px; 
+  color: #b8b8b8;
+  background-color: #000; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1;
+}
+
+p {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+*[data-role="button"] {
+  margin-top: 21px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  !color: #33ccff;
+  text-transform: uppercase;
+  !border: 2px solid #33ccff;
+  border: 2px solid #b8b8b8;
+  border-radius: 50px;
+}
+
+*[data-role="button"]:hover {
+  background-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  !color: #33ccff;
+  color: #ffff99;
+}
+
+hr {
+  border-top-color: #404040;
+}
+
+/* Vertical Center */
+.vertical-center-wrapper {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.vertical-center {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.container-fluid {
+  width: 100%;
+  display: border-box;
+}
+
+/* SVG Icons */
+
+.svg-icon {
+  width: 21px;
+  height: 30px;
+  padding-top: 5px;
+  margin-right: -8px;
+  margin-bottom: -8px;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #b8b8b8;
+}
+
+.svg-icon circle {
+  stroke: #b8b8b8;
+  stroke-width: 1;
+}
+
+/* Isotop */
+.isotope-item {
+  z-index: 2;
+}
+ 
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+ 
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+          transition-property: height, width;
+}
+ 
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/* Header */
+header {
+  height: 100vh;
+  padding-top: 21px;
+  padding-right: 34px;
+  padding-bottom: 34px;
+  padding-left: 34px;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.page-header {
+  font-size: 5vmax;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 2px; 
+  text-transform: capitalize; 
+}
+
+/* Events */
+main {
+  padding-top: 34px;
+  padding-right: 34px;
+  padding-bottom: 89px;
+  padding-left: 34px;
+}
+
+.events {
+  height: 800px;
+  overflow-y: auto;
+}
+
+nav.primary {
+  height: auto;
+  padding-right: 8px;
+  padding-bottom: 89px;
+  background-color: transparent;
+  border-right: 1px solid #404040;
+}
+
+nav.primary li {
+  width: 100%;
+  clear: both;
+  font-size: 15px;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+
+nav.primary li a:hover {
+  color: #ffff99;
+}
+
+nav.primary li a.selected {
+  padding-right: 21px;
+  !color: #33ccff;
+  color: #ffff99;
+  !border-right: 3px solid #33ccff;
+  border-right: 3px solid #ffff99;
+}
+
+.club {
+  width: 31.33%;
+  padding-top: 13px;
+  padding-bottom: 21px;
+  padding-left: 34px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.club-events {
+  padding: 34px;
+  height: 233px;
+  background-color: rgba(21, 21, 21, 0.5); 
+  cursor: pointer;
+}
+
+.club-events:hover {
+  background-color: rgba(34, 34, 34, 0.5); 
+  box-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.event-title {
+  -webkit-transition: all .2s linear;
+          transition: all .2s linear;
+}
+
+.club-events:hover .event-title {
+  color: #ffff99;
+  font-size: 28px;
+}
+  
+
+/* Footer */
+footer {
+  padding-top: 34px;
+  padding-right: 34px;
+  padding-bottom: 21px;
+  padding-left: 34px;
+  color: #707070;
+  background-color: rgba(0,0,0,1);
+}
+
+.li-inline {
+  padding-left: 0;
+}
+
+.icons li:last-child {
+  padding-right: 0;
+}
+</style>
+
+<style>
+
+/* Loading */
+div#load_screen{
+  background: #000;
+  opacity: 1;
+  position: fixed;
+  z-index:10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.loader:before,
+.loader:after,
+.loader {
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em #404040;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0 #404040;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em #404040;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0 #404040;
+  }
+}
+
+
+</style>
+
+<style>
+
+@keyframes move-twink-back {
+
+  from {
+    background-position: 0 0;
+  }
+
+  to { 
+    background-position: -10000px 5000px;
+  }
+
+}
+
+@-webkit-keyframes move-twink-back {
+
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+
+}
+@-moz-keyframes move-twink-back {
+
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+
+}
+
+@-ms-keyframes move-twink-back {
+
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+
+}
+
+@keyframes move-clouds-back {
+
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+
+}
+
+@-webkit-keyframes move-clouds-back {
+
+  from {
+    background-position: 0 0;
+  }
+  
+  to {
+    background-position: 10000px 0;
+  }
+
+}
+
+@-moz-keyframes move-clouds-back {
+
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+
+}
+
+@-ms-keyframes move-clouds-back {
+
+  from {
+    background-position: 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+
+}
+
+.stars, 
+.twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  !height:1831px;
+  display:block;
+}
+
+.clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  z-index:-3;
+  background:#000 url(images/stars.png) repeat top center;
+}
+
+.twinkling{
+  z-index:-2;
+  background:transparent url(images/twinkling.png) repeat top center;
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+  z-index:0;
+  background:transparent url(images/clouds3.png) repeat top center;
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -ms-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}
+
+</style>
+
+</head>
+<body>
+<div id="load_screen">
+<div class="vertical-center-wrapper">
+<div class="vertical-center">
+<div class="loader">Loading...</div>
+</div>
+</div>
+</div>
+
+<div class="container-fluid">
+
+<!-- Background Animation Starts -->
+<div class="stars" id="stars-height"></div>
+<div class="twinkling" id="twinkling-height"></div>
+<div class="clouds hidden-sm"></div>
+<!-- Background Animation Ends -->
+
+<div class="body-wrapper">
+<!-- Header Starts -->
+<header>
+<h1 class="title"><strong>Prajyukttam</strong><span class="pull-right fa fa-bars"></span></h1>
+<div class="vertical-center-wrapper">
+<div class="vertical-center">
+<div class="col-lg-offset-2 col-lg-5 col-md-offset-2 col-md-6 col-sm-12">
+<h1 class="page-header">Prajyukttam<br>2015 <small>towards infinity ...</small></h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+Nunc semper consequat augue, a fermentum elit.<br>
+Nullam eget dictum velit. Integer luctus arcu quis nisi hendrerit sollicitudin.</p>
+<p><button data-role="button" type="button" onclick="exploreGuide()">Explore the Guide <svg class="svg-icon" viewBox="0 0 20 20"><path fill="none" d="M11.611,10.049l-4.76-4.873c-0.303-0.31-0.297-0.804,0.012-1.105c0.309-0.304,0.803-0.293,1.105,0.012l5.306,5.433c0.304,0.31,0.296,0.805-0.012,1.105L7.83,15.928c-0.152,0.148-0.35,0.223-0.547,0.223c-0.203,0-0.406-0.08-0.559-0.236c-0.303-0.309-0.295-0.803,0.012-1.104L11.611,10.049z"></path></svg></button></p>
+</div>
+</div>
+</div>
+</header>
+<!-- Header Ends -->
+
+<!-- Main Starts -->
+<main class="clearfix">
+<h1>Events|</h1>
+<hr>
+<nav class="primary clearfix col-lg-2 col-md-2 col-sm-12 text-right hidden-sm">
+<ul>
+<li><a href="#" class="selected" data-filter="*">All Events</a></li>
+<li><a href="#" data-filter=".basic-science">Basic Science</a></li>
+<li><a href="#" data-filter=".circuitronics">Circuitronics</a></li>
+<li><a href="#" data-filter=".civil">Civil</a></li>
+<li><a href="#" data-filter=".coding">Coding</a></li>
+<li><a href="#" data-filter=".debate">Debate</a></li>
+<li><a href="#" data-filter=".gaming">Gaming</a></li>
+<li><a href="#" data-filter=".marathon">Marathon</a></li>
+<li><a href="#" data-filter=".mechanical">Mechanical</a></li>
+<li><a href="#" data-filter=".robotics">Robotics</a></li>
+<li><a href="#" data-filter=".web-designing">Web Designing</a></li>
+</ul>
+</nav>
+
+<section class="main col-lg-10 col-md-10 col-sm-12">
+<div class="events">
+<div class="all-events">         
+<article class="club robotics">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Auto Drive</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club debate">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Bosquiz</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club mechanical">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">CAD Design</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club circuitronics">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Circuit Debugging</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club civil">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Constro D'fice</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club web-designing">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Design Creator</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club civil">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Dream Planner</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club basic-science">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Extempore Speech</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club gaming">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Gaming</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club coding">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Geek's Arena</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club debate">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Inter College Debate</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club coding">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Kryptocism</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club circuitronics">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Labyrinth</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club civil">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Lens & Slide</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club marathon">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Marathon (Boys)</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club marathon">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Marathon (Girls)</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club robotics">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Off Road Drive</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club basic-science">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Paper Presentation</h3>
+</div>
+</div>
+</div>
+</article>
+<article class="club web-designing">
+<div class="club-events">
+<div class="vertical-center-wrapper">
+<div class="vertical-center text-center">
+<h3 class="event-title">Riddle Snipper</h3>
+</div>
+</div>
+</div>
+</article> 
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Main Ends -->
+
+<!-- Footer Starts -->
+<footer class="clearfix">
+<hr>
+<div class="col-lg-2 col-md-3 col-sm-12">
+<h1 class="subtitle"><strong>Contact</strong></h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p><a href="mailto:prajyukttam@dbuniversity.ac.in">prajyukttam@dbuniversity.ac.in</a></p>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-12">
+<h2 class="subtitle">Mention</h2>
+<p><a href="">Core Committee</a><br>
+<a href="http://www.dbuniversity.ac.in/" target="_blank">Assam Don Bosco University</a></p>
+</div>
+<div class="col-lg-7 col-md-4 col-sm-12">
+<ul class="li-inline icons pull-right">
+<li class="subtitle"><strong>Find Us On</strong></li>
+<li><span class="fa fa-2x fa-facebook-square"></span></li>
+<li><span class="fa fa-2x fa-twitter-square"></span></li>
+<li><span class="fa fa-2x fa-instagram"></span></li>
+<li><span class="fa fa-2x fa-youtube-square"></span></li>
+</ul>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+<br>
+<ul class="li-inline">
+<li><a href="">History</a></li>
+<li><a href="">Sponsors</a></li>
+<li><a href="">Android App</a></li>
+<li><a href="">Terms</a></li>
+<li><a href="http://www.debashisbarman.in/" target="_blank">Credits</a></li>
+<li>&copy; 2015 Prajyukttam Core Committee</li>
+<li><audio src="music/bg.mp3" autoplay loop>
+<p>If you are reading this, it is because your browser does not support the audio element.</p>
+</audio></li>
+</ul>
+</div>
+</footer>
+<!-- Footer Ends -->
+
+</div>
+
+<script type="text/javascript">
+function exploreGuide() {
+    window.open("");
+}
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+var $container = $('.all-events');
+$container.isotope({
+    filter: '*',
+    animationOptions: {
+        duration: 750,
+        easing: 'linear',
+        queue: false,
+    }
+});
+ 
+$('nav.primary ul a').click(function(){
+    var selector = $(this).attr('data-filter');
+    $container.isotope({
+        filter: selector,
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false,
+        }
+    });
+  return false;
+});
+ 
+var $optionSets = $('nav.primary ul'),
+       $optionLinks = $optionSets.find('a');
+  
+       $optionLinks.click(function(){
+          var $this = $(this);
+      // don't proceed if already selected
+      if ( $this.hasClass('selected') ) {
+          return false;
+      }
+   var $optionSet = $this.parents('nav.primary ul');
+   $optionSet.find('.selected').removeClass('selected');
+   $this.addClass('selected'); 
+});
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  browserWindowheight = $('.body-wrapper').height();
+  document.getElementById("stars-height").style.height = browserWindowheight + "px";
+  document.getElementById("twinkling-height").style.height = browserWindowheight + "px";
+});
+</script>
+
+<script type="text/javascript">
+$(function()
+{
+  $('.events').jScrollPane();
+});
+</script>
+
+<script type="text/javascript">
+window.addEventListener("load", function(){
+	var load_screen = document.getElementById("load_screen");
+	document.body.removeChild(load_screen);
+});
+</script>
+
+</body>
+</html>
